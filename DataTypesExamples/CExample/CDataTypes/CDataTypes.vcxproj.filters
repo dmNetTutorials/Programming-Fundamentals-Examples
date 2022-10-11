@@ -15,8 +15,25 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="data_types_sizes.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="overflows.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="Main.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="all_samples.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="data_types_sizes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="overflows.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
