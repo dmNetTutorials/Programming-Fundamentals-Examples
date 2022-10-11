@@ -127,7 +127,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="data_types_sizes.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="overflows.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="all_samples.h" />
+    <ClInclude Include="data_types_sizes.h" />
+    <ClInclude Include="overflows.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
