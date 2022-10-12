@@ -1,6 +1,6 @@
 #pragma once
 
-// підтримка типу даних bool
+// РїС–РґС‚СЂРёРјРєР° С‚РёРїСѓ РґР°РЅРёС… bool
 #include<stdbool.h> 
 
 void dataTypesSizes();
