@@ -1,14 +1,14 @@
 #pragma once
 
-#include<stdlib.h>
-#include<stdio.h>
-// підтримка типу даних bool
-#include<stdbool.h> 
+#include<iostream>
 
 // файли, в яких зберігаються
 // діапазони типів даних
 #include<limits>  // для цілих чисел
 #include<float.h> // для дробових чисел
+
+using std::cout;
+using std::endl;
 
 void overflowSample();
 void underflowSample();

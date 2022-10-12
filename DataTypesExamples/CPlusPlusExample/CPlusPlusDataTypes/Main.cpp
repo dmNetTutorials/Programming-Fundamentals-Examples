@@ -62,7 +62,7 @@ void studentInformationModel()
 
 // Головна функція 
 int main(int argumentsCount,		 	// кількість параметрів, які передав користувач
-		 char* argumentsValues[],	// значення параметрів, які передав користувач
+		 char* argumentsValues[],		// значення параметрів, які передав користувач
 		 char* environmentParameters[]  // змінні оточення, для поточного користувача
 )
 {
@@ -78,6 +78,7 @@ int main(int argumentsCount,		 	// кількість параметрів, як
 	underflowDoubleSample();
 	overflowBoolSample();
 	underflowBoolSample();
+
 	cout << endl;
 	studentInformationModel();
 

@@ -8,49 +8,49 @@
 void overflowSample()
 {
 	unsigned short number = USHRT_MAX; // 65535
-	printf("Значення змiнної до переповнення знизу:\t%d\n", number);
+	cout << "Значення змiнної до переповнення знизу:\t" << number << endl;
 	number += 5; //збільшити поточне значення на 2
-	printf("Значення змiнної до переповнення знизу:\t%d\n", number);
+	cout << "Значення змiнної до переповнення знизу:\t" << number << endl;
 }
 
 void underflowSample()
 {
 	signed short number = SHRT_MIN; // -32768
-	printf("Значення змiнної до переповнення знизу:\t%d\n", number);
+	cout << "Значення змiнної до переповнення знизу:\t" << number << endl;
 	number -= 10; // зменшити поточне значення на 10
-	printf("Значення змiнної до переповнення знизу:\t%d\n", number);
+	cout << "Значення змiнної до переповнення знизу:\t" << number << endl;
 }
 
 void overflowDoubleSample()
 {
 	double numberMax = DBL_MAX; //  1.7976931348623158e+308
-	printf("Значення змiнної до переповнення знизу:\t%d\n", numberMax);
+	cout << "Значення змiнної до переповнення знизу:\t" << numberMax << endl;
 	numberMax *= 2; // збільшити поточне значення вдвічі
-	printf("Значення змiнної до переповнення знизу:\t%d\n", numberMax);
+	cout << "Значення змiнної до переповнення знизу:\t" << numberMax << endl;
 }
 
 void underflowDoubleSample()
 {
 	double numberMin = DBL_MIN; // 2.2250738585072014e-308
-	printf("Значення змiнної до переповнення знизу:\t%d\n", numberMin);
+	cout << "Значення змiнної до переповнення знизу:\t" << numberMin << endl;
 	numberMin -= 10; // зменшити поточне значення на 10
-	printf("Значення змiнної до переповнення знизу:\t%d\n", numberMin);
+	cout << "Значення змiнної до переповнення знизу:\t" << numberMin << endl;
 }
 
 void overflowBoolSample()
 {
 	bool logicalValue = true;
-	printf("Значення змiнної до переповнення знизу:\t%d\n", logicalValue);
+	cout << "Значення змiнної до переповнення знизу:\t" << logicalValue << endl;
 	logicalValue += 2; // збільшити поточне значення вдвічі
-	printf("Значення змiнної до переповнення знизу:\t%d\n", logicalValue);
+	cout << "Значення змiнної до переповнення знизу:\t" << logicalValue << endl;
 }
 
 void underflowBoolSample()
 {
 	bool logicalValue = false;
-	printf("Значення змiнної до переповнення знизу:\t%d\n", logicalValue);
+	cout << "Значення змiнної до переповнення знизу:\t" << logicalValue << endl;
 	logicalValue -= 10; // зменшити поточне значення вдвічі
-	printf("Значення змiнної до переповнення знизу:\t%d\n", logicalValue);
+	cout << "Значення змiнної до переповнення знизу:\t" << logicalValue << endl;
 }
 
 #endif

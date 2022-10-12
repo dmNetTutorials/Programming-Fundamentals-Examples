@@ -8,17 +8,17 @@
 void dataTypesSizes()
 {
 
-	printf("char:\t%d\n", sizeof(char));
-	printf("bool:\t%d\n", sizeof(bool));
-	printf("short int:\t%d\n", sizeof(short int));
-	printf("int:\t%d\n", sizeof(int));
-	printf("long int:\t%d\n", sizeof(long int));
-	printf("long long int:\t%d\n", sizeof(long long int));
-	printf("float:\t%d\n", sizeof(float));
-	printf("long float:\t%d\n", sizeof(long float));
-	printf("double:\t%d\n", sizeof(double));
-	printf("long double:\t%d\n", sizeof(long double));
-	printf("void*:\t%d\n", sizeof(void*));
+	cout << "char:\t" <<  sizeof(char) << endl;
+	cout << "bool:\t" <<  sizeof(bool) << endl;
+	cout << "short int:\t" <<  sizeof(short int) << endl;
+	cout << "int:\t" <<  sizeof(int) << endl;
+	cout << "long int:\t" <<  sizeof(long int) << endl;
+	cout << "long long int:\t" <<  sizeof(long long int) << endl;
+	cout << "float:\t" <<  sizeof(float) << endl;
+	cout << "long float:\t" <<  sizeof(long float) << endl;
+	cout << "double:\t" <<  sizeof(double) << endl;
+	cout << "long double:\t" <<  sizeof(long double) << endl;
+	cout << "void*:\t" <<  sizeof(void*) << endl;
 
 }
 

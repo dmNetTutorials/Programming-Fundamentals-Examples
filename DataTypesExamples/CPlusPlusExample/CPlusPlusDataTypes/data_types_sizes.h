@@ -1,6 +1,8 @@
 #pragma once
 
-// підтримка типу даних bool
-#include<stdbool.h> 
+#include<iostream> 
+
+using std::cout;
+using std::endl;
 
 void dataTypesSizes();
