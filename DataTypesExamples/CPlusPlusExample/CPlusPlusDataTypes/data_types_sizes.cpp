@@ -1,6 +1,6 @@
 #include"data_types_sizes.h"
 
-// "охорона включень" (include guard)
+// "РѕС…РѕСЂРѕРЅР° РІРєР»СЋС‡РµРЅСЊ" (include guard)
 #ifndef DATA_TYPES_SIZES_H
 
 #define DATA_TYPES_SIZES_H
