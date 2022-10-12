@@ -12,7 +12,7 @@ using std::endl;	// символ переводу на новий рядок
 void studentInformationModel()
 {
 	// ПІБ
-	string studentFullName = "Ñòóäåíò 1";
+	string studentFullName = "Студент 1";
 	// Ідентифікатор студента/залікової книжки
 	unsigned int studentID = 1;
 	// Вік студента
@@ -22,9 +22,9 @@ void studentInformationModel()
 	// Чи навчається студент?
 	bool isStuding = true;
 	// Адреса прописки студента
-	string originAddress = "Êè¿â, Óêðà¿íà";
+	string originAddress = "Київ, Україна";
 	// Освітній ступінь студента
-	string degree = "Áàêàëàâð";
+	string degree = "Бакалавр";
 
 	// Навчальна група, назва якої формується з
 	// освітнього ступеня та поточного року навчання
@@ -34,36 +34,36 @@ void studentInformationModel()
 	// Загальний об'єм пам'яті (в байтах) необхідний для 
 	// зберігання відомостей про студента
 	unsigned int totalMemoryInBytes = sizeof(studentFullName) +
-									  sizeof(group) +
-									  sizeof(studentID) +
-									  sizeof(studentAge) +
-									  sizeof(currentStudyYear) +
-									  sizeof(isStuding) +
-									  sizeof(originAddress) +
-									  sizeof(degree);
+					  sizeof(group) +
+					  sizeof(studentID) +
+					  sizeof(studentAge) +
+					  sizeof(currentStudyYear) +
+					  sizeof(isStuding) +
+					  sizeof(originAddress) +
+					  sizeof(degree);
 
-	cout << "ÏIÁ ñòóäåíòà:\t\t" << studentFullName << endl;
-	cout << "Ãðóïà:\t\t\t" << group << endl;
-	cout << "Íîìåð çàëiêîâî¿ êíèæêè:\t" << studentID << endl;
-	cout << "Âiê ñòóäåíòà:\t\t" << studentAge << endl;
-	cout << "Ðiê íàâ÷àííÿ:\t\t" << currentStudyYear << endl;
+	cout << "ПIБ студента:\t\t" << studentFullName << endl;
+	cout << "Група:\t\t\t" << group << endl;
+	cout << "Номер залiкової книжки:\t" << studentID << endl;
+	cout << "Вiк студента:\t\t" << studentAge << endl;
+	cout << "Рiк навчання:\t\t" << currentStudyYear << endl;
 
 	// приклад використання тернарного умовного оператора 
 	// в залежності від значення змінної isStuding, буде виведено значення:
 	// Якщо isStuding = true, буде виведено "Так"
 	// Якщо isStuding = false, буде виведено "Ні"
-	cout << "×è ùå íàâ÷àºòüñÿ:\t" << ((isStuding) ? "Òàê" : "Í³") << endl;
-	cout << "Àäðåñà:\t\t\t" << originAddress << endl;
-	cout << "Îñâiòíié ñòóïiíü:\t" << degree << endl;
+	cout << "Чи ще навчається:\t" << ((isStuding) ? "Так" : "Ні") << endl;
+	cout << "Адреса:\t\t\t" << originAddress << endl;
+	cout << "Освiтнiй ступiнь:\t" << degree << endl;
 
-	cout << "Çàãàëüíèé îá'ºì âèêîðèñòàííî¿ ïàì'ÿòi (â áàéòàõ):\t" <<
+	cout << "Загальний об'єм використанної пам'ятi (в байтах):\t" <<
 		totalMemoryInBytes << endl;
 }
 
 // Головна функція 
-int main(int argumentsCount,		// кількість параметрів, які передав користувач
-	 char* argumentsValues[],	// значення параметрів, які передав користувач
-	 char* environmentParameters[]  // змінні оточення, для поточного користувача
+int main(int argumentsCount,		 	// кількість параметрів, які передав користувач
+		 char* argumentsValues[],	// значення параметрів, які передав користувач
+		 char* environmentParameters[]  // змінні оточення, для поточного користувача
 )
 {
 
