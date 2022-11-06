@@ -5,51 +5,51 @@
 #include"Input_Main_Sample.h"
 
 /*
-	Відобразити меню
+	Г‚ВіГ¤Г®ГЎГ°Г Г§ГЁГІГЁ Г¬ГҐГ­Гѕ
 */
 void show_menu()
 {
-	wcout << L"Оберiть пункт меню:" << endl;
-	wcout << L"1.) Ввести iм'я користувача" << endl;
-	wcout << L"2.) Ввести пароль" << endl;
-	wcout << L"3.) Завершити роботу" << endl;
+	wcout << L"ГЋГЎГҐГ°iГІГј ГЇГіГ­ГЄГІ Г¬ГҐГ­Гѕ:" << endl;
+	wcout << L"1.) Г‚ГўГҐГ±ГІГЁ iГ¬'Гї ГЄГ®Г°ГЁГ±ГІГіГўГ Г·Г " << endl;
+	wcout << L"2.) Г‚ГўГҐГ±ГІГЁ ГЇГ Г°Г®Г«Гј" << endl;
+	wcout << L"3.) Г‡Г ГўГҐГ°ГёГЁГІГЁ Г°Г®ГЎГ®ГІГі" << endl;
 }
 
-// Введення логіну користувача
+// Г‚ГўГҐГ¤ГҐГ­Г­Гї Г«Г®ГЈВіГ­Гі ГЄГ®Г°ГЁГ±ГІГіГўГ Г·Г 
 string enter_login()
 {
 	string login;
 
-	wcout << L"Введiть ім'я користувача (login):" << endl;
+	wcout << L"Г‚ГўГҐГ¤iГІГј ВіГ¬'Гї ГЄГ®Г°ГЁГ±ГІГіГўГ Г·Г  (login):" << endl;
 	cin >> login;
 
 	return "";
 }
 
-// Введення паролю користувача
+// Г‚ГўГҐГ¤ГҐГ­Г­Гї ГЇГ Г°Г®Г«Гѕ ГЄГ®Г°ГЁГ±ГІГіГўГ Г·Г 
 wchar_t* enter_password()
 {
-	// Максимальна довжина паролю
+	// ГЊГ ГЄГ±ГЁГ¬Г Г«ГјГ­Г  Г¤Г®ГўГ¦ГЁГ­Г  ГЇГ Г°Г®Г«Гѕ
 	const short int MAX_PASSWORD_LENGTH = 16;
 
-	// Пароль (масив одиночних символів, 
-	// для зберігання)
+	// ГЏГ Г°Г®Г«Гј (Г¬Г Г±ГЁГў Г®Г¤ГЁГ­Г®Г·Г­ГЁГµ Г±ГЁГ¬ГўГ®Г«ВіГў, 
+	// Г¤Г«Гї Г§ГЎГҐГ°ВіГЈГ Г­Г­Гї)
 	wchar_t password[16] = {};
 
-	wcout << L"Введiть пароль:" << endl;
+	wcout << L"Г‚ГўГҐГ¤iГІГј ГЇГ Г°Г®Г«Гј:" << endl;
 
-	// Ввести пароль
-	// Якщо буде введено символ 
-	// пробілу, то весь текст
-	// після нього не збережеться
+	// Г‚ГўГҐГ±ГІГЁ ГЇГ Г°Г®Г«Гј
+	// ГџГЄГ№Г® ГЎГіГ¤ГҐ ГўГўГҐГ¤ГҐГ­Г® Г±ГЁГ¬ГўГ®Г« 
+	// ГЇГ°Г®ГЎВіГ«Гі, ГІГ® ГўГҐГ±Гј ГІГҐГЄГ±ГІ
+	// ГЇВіГ±Г«Гї Г­ГјГ®ГЈГ® Г­ГҐ Г§ГЎГҐГ°ГҐГ¦ГҐГІГјГ±Гї
 	std::wcin >> password;
 
 	return password;
 
-	//for (short symbol = 0; // лічильник символів
-	//	 // обмежити введення тільки 16 симолами
+	//for (short symbol = 0; // Г«ВіГ·ГЁГ«ГјГ­ГЁГЄ Г±ГЁГ¬ГўГ®Г«ВіГў
+	//	 // Г®ГЎГ¬ГҐГ¦ГЁГІГЁ ГўГўГҐГ¤ГҐГ­Г­Гї ГІВіГ«ГјГЄГЁ 16 Г±ГЁГ¬Г®Г«Г Г¬ГЁ
 	//	 symbol < MAX_PASSWORD_LENGTH; 
-	//	 // перейти до введення наступного символу 
+	//	 // ГЇГҐГ°ГҐГ©ГІГЁ Г¤Г® ГўГўГҐГ¤ГҐГ­Г­Гї Г­Г Г±ГІГіГЇГ­Г®ГЈГ® Г±ГЁГ¬ГўГ®Г«Гі 
 	//	 symbol++)
 	//{
 	//	
@@ -59,16 +59,16 @@ wchar_t* enter_password()
 
 void menu()
 {
-	// Зміна, для зберігання номеру 
-	// обраного пункту меню
+	// Г‡Г¬ВіГ­Г , Г¤Г«Гї Г§ГЎГҐГ°ВіГЈГ Г­Г­Гї Г­Г®Г¬ГҐГ°Гі 
+	// Г®ГЎГ°Г Г­Г®ГЈГ® ГЇГіГ­ГЄГІГі Г¬ГҐГ­Гѕ
 	short int selectedMenuItem = 1;
 	string login = "";
 	wchar_t* password = nullptr;
 
-	// Відобразити меню
+	// Г‚ВіГ¤Г®ГЎГ°Г Г§ГЁГІГЁ Г¬ГҐГ­Гѕ
 	show_menu();
 
-	// Обрати пункт меню (ввести номер пункту)
+	// ГЋГЎГ°Г ГІГЁ ГЇГіГ­ГЄГІ Г¬ГҐГ­Гѕ (ГўГўГҐГ±ГІГЁ Г­Г®Г¬ГҐГ° ГЇГіГ­ГЄГІГі)
 	cin >> selectedMenuItem;
 
 	switch (selectedMenuItem)
@@ -81,24 +81,24 @@ void menu()
 		break;
 	case 3:
 	default:
-		// завершити роботу програми
+		// Г§Г ГўГҐГ°ГёГЁГІГЁ Г°Г®ГЎГ®ГІГі ГЇГ°Г®ГЈГ°Г Г¬ГЁ
 		exit(0);
 	}
 
 	if (!login.empty())
 	{
-		std::wcout << L"Ваш логiн:\t" << login.c_str() << endl;
+		std::wcout << L"Г‚Г Гё Г«Г®ГЈiГ­:\t" << login.c_str() << endl;
 	}
 	else
 	{
-		std::wcout << L"Ваш пароль:\t" << password << endl;
+		std::wcout << L"Г‚Г Гё ГЇГ Г°Г®Г«Гј:\t" << password << endl;
 		//delete[] password;
 	}
 
 	//cin.setf(cin.skipws);
 	//std::cout << std::to_string(cin.flags()) << endl;
 
-	// не пропускати пробіли на початку рядка
+	// Г­ГҐ ГЇГ°Г®ГЇГіГ±ГЄГ ГІГЁ ГЇГ°Г®ГЎВіГ«ГЁ Г­Г  ГЇГ®Г·Г ГІГЄГі Г°ГїГ¤ГЄГ 
 	// https://en.cppreference.com/w/cpp/io/manip/skipws
 	// https://www.w3schools.com/cpp/cpp_strings_input.asp
 	//cin >> std::noskipws >> text;
@@ -106,6 +106,27 @@ void menu()
 	//wcout << "You entered:" << endl << text;
 
 	//delete[] text;
+=======
+#include<string>
+
+void menu()
+{
+	//std::wcout << L"Number: \101" << endl;
+
+	wcout << "Enter text" << endl;
+
+	//
+	char* text = new char[100];
+	//cin.setf(cin.skipws);
+	std::cout << std::to_string(cin.flags()) << endl;
+
+	// Г­ГҐ ГЇГ°Г®ГЇГіГ±ГЄГ ГІГЁ ГЇГ°Г®ГЎВіГ«ГЁ Г­Г  ГЇГ®Г·Г ГІГЄГі Г°ГїГ¤ГЄГ 
+	// https://en.cppreference.com/w/cpp/io/manip/skipws
+	cin >> std::noskipws >> text;
+
+	wcout << "You entered:" << endl << text;
+
+	delete[] text;
 }
 
 #endif
