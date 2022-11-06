@@ -4,8 +4,10 @@
 #include<string>
 
 using std::wcout;
-using std::string;
+
+using std::wstring;
 using std::cin;
+using std::wcin;
 using std::endl;
 
 /*
@@ -13,10 +15,14 @@ using std::endl;
 	�� �������� ����� ����������
 	� ������ ���.
 */
-=======
-
-using std::wcout;
-using std::cin;
-using std::endl;
-
 extern void menu();
+
+/*
+	³��������� ����
+*/
+extern void show_menu();
+
+// �������� ����� �����������
+extern wstring** enter_login();
+// �������� ������ �����������
+extern char** enter_password();
