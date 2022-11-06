@@ -9,6 +9,10 @@
 */
 void show_menu()
 {
+	// Символ L перед текстом необхідний для 
+	// коректного відображення тексту у wcout
+	// оскільки wcout може працювати з рядками
+	// тпиу даних wchar_t ("розширеними" символами)
 	wcout << L"Оберiть пункт меню:" << endl;
 	wcout << L"1.) Ввести iм'я користувача" << endl;
 	wcout << L"2.) Ввести пароль" << endl;
@@ -16,25 +20,35 @@ void show_menu()
 }
 
 // Введення логіну користувача
-string enter_login()
+wstring** enter_login()
 {
-	string login;
+	wstring* login = new wstring();
 
-	wcout << L"Введiть ім'я користувача (login):" << endl;
-	cin >> login;
+	wcout << L"Введiть iм'я користувача (login):" << endl;
 
-	return "";
+	// Звільняє буфер вводу від
+	// символів та роздільників (delimiter)
+	// https://en.cppreference.com/w/cpp/io/basic_istream/ignore
+	wcin.ignore();
+
+	// Зчитати цілий рядок тексту, 
+	// включно з пробілами
+	getline(wcin, *login);
+
+	// Повернути посилання на 
+	// виділену пам'ять
+	return &login;
 }
 
 // Введення паролю користувача
-wchar_t* enter_password()
+char** enter_password()
 {
 	// Максимальна довжина паролю
 	const short int MAX_PASSWORD_LENGTH = 16;
 
 	// Пароль (масив одиночних символів, 
 	// для зберігання)
-	wchar_t password[16] = {};
+	char* password = new char[MAX_PASSWORD_LENGTH];
 
 	wcout << L"Введiть пароль:" << endl;
 
@@ -42,18 +56,9 @@ wchar_t* enter_password()
 	// Якщо буде введено символ 
 	// пробілу, то весь текст
 	// після нього не збережеться
-	std::wcin >> password;
+	cin >> password;
 
-	return password;
-
-	//for (short symbol = 0; // лічильник символів
-	//	 // обмежити введення тільки 16 симолами
-	//	 symbol < MAX_PASSWORD_LENGTH; 
-	//	 // перейти до введення наступного символу 
-	//	 symbol++)
-	//{
-	//	
-	//}
+	return &password;
 
 }
 
@@ -62,8 +67,8 @@ void menu()
 	// Зміна, для зберігання номеру 
 	// обраного пункту меню
 	short int selectedMenuItem = 1;
-	string login = "";
-	wchar_t* password = nullptr;
+	wstring login = L"";
+	char* password = nullptr;
 
 	// Відобразити меню
 	show_menu();
@@ -71,41 +76,42 @@ void menu()
 	// Обрати пункт меню (ввести номер пункту)
 	cin >> selectedMenuItem;
 
+	// Переіврити обраний пункт меню
 	switch (selectedMenuItem)
 	{
 	case 1:
-		login = enter_login();
+		login = **enter_login();
 		break;
 	case 2:
-		password = enter_password();
+		password = *enter_password();
 		break;
 	case 3:
 	default:
+		// якщо користувач обрав "Завершення роботи"
+		// або нічого не обрав то потрібно
 		// завершити роботу програми
 		exit(0);
 	}
 
+	// Перевірити, чи введено
+	// ім'я користувача
 	if (!login.empty())
 	{
-		std::wcout << L"Ваш логiн:\t" << login.c_str() << endl;
+		std::wcout << L"Ваш логiн:\t" << login << endl;
 	}
 	else
 	{
-		std::wcout << L"Ваш пароль:\t" << password << endl;
-		//delete[] password;
+		// Якщо пароль був введений
+		if (password != nullptr)
+		{
+			// змінити пароль
+			std::wcout << L"Пароль успiшно змiнено на:\t"
+					   << endl << password;
+
+			// звільнити пам'ять
+			delete[] password;
+		}
 	}
-
-	//cin.setf(cin.skipws);
-	//std::cout << std::to_string(cin.flags()) << endl;
-
-	// не пропускати пробіли на початку рядка
-	// https://en.cppreference.com/w/cpp/io/manip/skipws
-	// https://www.w3schools.com/cpp/cpp_strings_input.asp
-	//cin >> std::noskipws >> text;
-
-	//wcout << "You entered:" << endl << text;
-
-	//delete[] text;
 }
 
 #endif

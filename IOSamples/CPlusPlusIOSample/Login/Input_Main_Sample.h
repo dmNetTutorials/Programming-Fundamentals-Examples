@@ -4,8 +4,9 @@
 #include<string>
 
 using std::wcout;
-using std::string;
+using std::wstring;
 using std::cin;
+using std::wcin;
 using std::endl;
 
 /*
