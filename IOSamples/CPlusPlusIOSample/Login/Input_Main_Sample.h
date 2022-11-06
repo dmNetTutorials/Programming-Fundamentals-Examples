@@ -15,3 +15,13 @@ using std::endl;
 	в іншому місці.
 */
 extern void menu();
+
+/*
+	Відобразити меню
+*/
+extern void show_menu();
+
+// Введення логіну користувача
+extern wstring** enter_login();
+// Введення паролю користувача
+extern char** enter_password();

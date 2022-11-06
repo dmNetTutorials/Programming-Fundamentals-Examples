@@ -81,15 +81,15 @@ int main(int argumentsCount,		 	// кількість параметрів, переданих під час запус
 	// підтримка поточної локалізаці
 	// (мови та національних особливостей, 
 	// таких як валюта, формат часу і т.д.)
-	 setlocale(LC_ALL, "");
+	setlocale(LC_ALL, "");
 
 	// якщо кількість переданих параметрів більше 1
 	// 1-й параметр завжди є назвою програми, що запускається
-	//if (argumentsCount > 1)
+	if (argumentsCount > 1)
 	{
-		//return startupAuthorization(argumentsCount, argumentsValues);
+		return startupAuthorization(argumentsCount, argumentsValues);
 	}
-	//else
+	else
 	{
 		// дані передаються в програму під час виконання
 		menu();
