@@ -12,6 +12,7 @@ void menu()
 
 	wcout << "Enter text" << endl;
 
+	//
 	char* text = new char[100];
 	//cin.setf(cin.skipws);
 	std::cout << std::to_string(cin.flags()) << endl;
