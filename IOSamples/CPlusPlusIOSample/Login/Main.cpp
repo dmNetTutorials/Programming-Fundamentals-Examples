@@ -1,10 +1,37 @@
+/*
+
+	31.10.2022
+	Author: Dmitry Sulyma
+	E-mail: d.o.sulyma@npu.edu.ua
+	Repository: 
+
+	This code distributed under GPL-3.0 licence.
+
+*/
+
 #include"Necessary_Headers.h"
 #include<iostream>
 
 using namespace std;
 
+/// <summary>
+/// Авторизація користувача
+/// </summary>
+/// 
+/// <param name="argumentsCount">
+/// Кілкьість прааметрів
+/// </param>
+/// 
+/// <param name="argumentsValues">
+/// Значення параметрів
+/// </param>
+/// 
+/// <returns>
+/// 0 (нуль) якщо виконана успішно
+/// -1 у випадку будь-якої помилки
+/// </returns>
 int startupAuthorization(int argumentsCount,
-	char* argumentsValues[])
+						 char* argumentsValues[])
 {
 	// кількість символів в паролі
 	int passwordLength = 0;
@@ -54,18 +81,18 @@ int main(int argumentsCount,		 	// кількість параметрів, переданих під час запус
 	// підтримка поточної локалізаці
 	// (мови та національних особливостей, 
 	// таких як валюта, формат часу і т.д.)
-	//setlocale(LC_ALL, "");
+	setlocale(LC_ALL, "");
 
 	// якщо кількість переданих параметрів більше 1
 	// 1-й параметр завжди є назвою програми, що запускається
-	if (argumentsCount > 1)
+	//if (argumentsCount > 1)
 	{
-		return startupAuthorization(argumentsCount, argumentsValues);
+		//return startupAuthorization(argumentsCount, argumentsValues);
 	}
-	else
+	//else
 	{
 		// дані передаються в програму під час виконання
-		// menu();
+		menu();
 	}
 
 	// зачекати поки користувач 
