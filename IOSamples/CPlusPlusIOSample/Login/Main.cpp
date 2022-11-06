@@ -10,7 +10,6 @@
 */
 
 #include"Necessary_Headers.h"
-#include<iostream>
 
 using namespace std;
 
@@ -49,6 +48,7 @@ int startupAuthorization(int argumentsCount,
 		// для порівняння рядків, в С++ використовуєтсья
 		// функція strcmp, у випадку коли обидва рядки 
 		// однакові то результатом функції буде нуль 
+		// https://en.cppreference.com/w/cpp/string/byte/strcmp
 		if (strcmp(argumentKey, "-login") == 0)
 		{
 			// якщо користувач вказав login
@@ -81,7 +81,7 @@ int main(int argumentsCount,		 	// кількість параметрів, переданих під час запус
 	// підтримка поточної локалізаці
 	// (мови та національних особливостей, 
 	// таких як валюта, формат часу і т.д.)
-	setlocale(LC_ALL, "");
+	 setlocale(LC_ALL, "");
 
 	// якщо кількість переданих параметрів більше 1
 	// 1-й параметр завжди є назвою програми, що запускається
