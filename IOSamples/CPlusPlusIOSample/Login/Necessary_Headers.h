@@ -1,5 +1,7 @@
 #pragma once
 
-// Οεπελ³κ βρ³υ νεξαυ³δνθυ τΰιλ³β
+// ΓΓ¥Γ°Γ¥Γ«Β³Γª ΓΆΓ±Β³Γµ Γ­Γ¥Γ®Γ΅ΓµΒ³Γ¤Γ­Γ¨Γµ Γ΄Γ Γ©Γ«Β³ΓΆ
 
 #include<iostream>
+
+#include"Input_Main_Sample.h"
