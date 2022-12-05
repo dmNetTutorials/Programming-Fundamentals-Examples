@@ -36,15 +36,104 @@ void BooleanSupportedOperations()
 
 }
 
+void IfElseSample()
+{
+	// к-сть авторів документа
+	int documentAuthorsAmount = 3;
+	// наявна к-сть підписів авторів в документі
+	int documentAuthorsSignaturesCount = 0;
+	// чи документ готовий до подальшого опрацювання?
+	bool isDocumentReady = false;
+	if (documentAuthorsSignaturesCount == documentAuthorsAmount)
+	{
+		// якщо к-сть підписів не дорівнює к-сті авторів,
+		// то документ можна опрацьовувати
+		isDocumentReady = true;
+	}
+	else
+	{
+		// документ не можна починати опрацьовувати
+		isDocumentReady = false;
+	}
+}
+
+void switchSample()
+{
+
+	// стан готовності документа у відсотках
+	int documentCompletitionProgressInPercents = 75;
+
+	switch (documentCompletitionProgressInPercents)
+	{
+	case 0:
+		cout << "Документ внесено в чергу на опрацювання" << endl;
+		break;
+	case 25:
+		cout << "Документ опрацьовано на 25%" << endl;
+		break;
+	case 50:
+		cout << "Документ опрацьовано наполовину" << endl;
+		break;
+	case 75:
+		cout << "Документ опрацьовано на 75%" << endl;
+		break;
+	case 100:
+		cout << "Документ готовий" << endl;
+		break;
+	default:
+		cout << "Документ ще не опрацьовується" << endl;
+		break;
+	}
+}
+
+void showMenu()
+{
+	cout << "Оберiть пункт меню:" << endl
+		<< "1.)\tВиконати програму" << endl
+		<< "2.)\tДовiдка" << endl
+		<< "3.)\tЗавершити роботу" << endl;
+}
+
+void menuSample()
+{
+	// обраний користувачем пункт меню
+	short selectedMenuItem = 0;
+
+	// вiдобразити меню
+	showMenu();
+
+	// користувач обирає пункт меню
+	cin >> selectedMenuItem;
+
+	// перевiрка обраного пункту меню
+	switch (selectedMenuItem)
+	{
+	case Run:
+		cout << "Виконання програми" << endl;
+		break;
+	case Help:
+		cout << "Версiя програми - 1.0.0" << endl;
+		break;
+	case Exit:
+		cout << "Завершення роботи програми" << endl;
+		exit(0);
+		break;
+	case Unselected:
+	default:
+		// якщо користувач не вибрав жодного пункту меню
+		cout << "Натиснiсть будь-яку клавiшу для завершення роботи" << endl;
+		break;
+	}
+
+}
+
 int main()
 {
 	setlocale(LC_ALL,"ukr.utf8");
 
 	//BooleanSupportedOperations();
-
-	bool s1 = true;
-	bool s2 = s1 * -1;
-
-	cout << s2 << endl;
+	//IfElseSample();
+	//switchSample();
+	menuSample();
 
 }
